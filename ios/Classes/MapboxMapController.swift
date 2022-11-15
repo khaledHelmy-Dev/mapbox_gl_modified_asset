@@ -963,8 +963,19 @@ class MapboxMapController: NSObject, FlutterPlatformView, MGLMapViewDelegate, Ma
         let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
 
         if let feature = firstFeatureOnLayers(at: point), let id = feature.identifier {
+            var featureAsStr: String = ""
+             let dictionary = feature.geoJSONDictionary()
+
+             if let featureJsonData = try? JSONSerialization.data(
+                 withJSONObject: dictionary,
+                 options: []
+             ), let featureJsonStr = String(data: featureJsonData, encoding: .ascii) {
+                featureAsStr = featureJsonStr
+             }
+
             channel?.invokeMethod("feature#onTap", arguments: [
                 "id": id,
+                "feature": featureAsStr,
                 "x": point.x,
                 "y": point.y,
                 "lng": coordinate.longitude,
