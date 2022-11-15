@@ -396,7 +396,8 @@ class MapboxWebGlPlatform extends MapboxGlPlatform
     final payload = {
       'point': Point<double>(e.point.x.toDouble(), e.point.y.toDouble()),
       'latLng': LatLng(e.lngLat.lat.toDouble(), e.lngLat.lng.toDouble()),
-      if (features.isNotEmpty) "id": features.first.id,
+      if (features.isNotEmpty) 'id': features.first.id,
+      if (features.isNotEmpty) 'feature': jsonEncode(features.first),
     };
     if (features.isNotEmpty) {
       onFeatureTappedPlatform(payload);
