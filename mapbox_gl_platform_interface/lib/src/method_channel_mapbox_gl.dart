@@ -14,6 +14,8 @@ class MethodChannelMapboxGl extends MapboxGlPlatform {
         break;
 
       case 'feature#onTap':
+        final featureStr = call.arguments['feature'];
+        final feature = jsonDecode(featureStr);
         final id = call.arguments['id'];
         final double x = call.arguments['x'];
         final double y = call.arguments['y'];
@@ -21,6 +23,7 @@ class MethodChannelMapboxGl extends MapboxGlPlatform {
         final double lat = call.arguments['lat'];
         onFeatureTappedPlatform({
           'id': id,
+          'feature': feature,
           'point': Point<double>(x, y),
           'latLng': LatLng(lat, lng)
         });
