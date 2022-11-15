@@ -1464,6 +1464,7 @@ final class MapboxMapController
     arguments.put("lat", point.getLatitude());
     if (feature != null) {
       arguments.put("id", feature.id());
+      arguments.put("feature", feature.toJson());
       methodChannel.invokeMethod("feature#onTap", arguments);
     } else {
       methodChannel.invokeMethod("map#onMapClick", arguments);
