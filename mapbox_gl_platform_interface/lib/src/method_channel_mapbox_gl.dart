@@ -782,4 +782,14 @@ class MethodChannelMapboxGl extends MapboxGlPlatform {
       return new Future.error(e);
     }
   }
+
+  @override
+  Future<void> setStyle(String style) async {
+    try {
+      debugPrint("$style");
+      _channel.invokeMethod('style#setStyle', style);
+    } on PlatformException catch (e) {
+      return new Future.error(e);
+    }
+  }
 }

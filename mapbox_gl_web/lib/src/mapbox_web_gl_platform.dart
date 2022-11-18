@@ -1051,4 +1051,9 @@ class MapboxWebGlPlatform extends MapboxGlPlatform
   void forceResizeWebMap() {
     _map.resize();
   }
+
+  @override
+  Future<void> setStyle(String style) async {
+    _map.setStyle(style);
+  }
 }

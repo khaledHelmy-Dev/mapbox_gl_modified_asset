@@ -892,6 +892,10 @@ class MapboxMapController: NSObject, FlutterPlatformView, MGLMapViewDelegate, Ma
                     result(value.absoluteString)
                 }
             }
+        case "style#setStyle":
+            guard let styleArgs = methodCall.arguments as? String else { return }
+            setStyleString(styleString: styleArgs)
+            result(nil)
         default:
             result(FlutterMethodNotImplemented)
         }

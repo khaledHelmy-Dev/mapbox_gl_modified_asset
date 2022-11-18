@@ -1343,6 +1343,13 @@ class MapboxMapController extends ChangeNotifier {
     return _mapboxGlPlatform.takeSnapshot(snapshotOptions);
   }
 
+  /// Change the layer style without recreating the mapbox map
+  /// You can pass style uri or geo json style on it
+  /// [style] - It may be the style uri or geo json style string
+  Future<void> setStyle(String style) async {
+    return _mapboxGlPlatform.setStyle(style);
+  }
+
   @override
   void dispose() {
     super.dispose();

@@ -182,6 +182,8 @@ abstract class MapboxGlPlatform {
 
   Future<String> takeSnapshot(SnapshotOptions snapshotOptions);
 
+  Future<void> setStyle(String style);
+
   @mustCallSuper
   void dispose() {
     // clear all callbacks to avoid cyclic refs

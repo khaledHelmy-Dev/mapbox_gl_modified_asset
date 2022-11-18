@@ -1402,6 +1402,19 @@ final class MapboxMapController
               });
           break;
         }
+      case "style#setStyle":
+      {
+        if (mapboxMap == null) {
+          result.error(
+                  "MAPBOX MAP IS NULL",
+                  "The mapbox map instance is null",
+                  null);
+        }
+        String styleArgs = "";
+        setStyleString(styleArgs);
+        result.success(null);
+        break;
+      }
       default:
         result.notImplemented();
     }
