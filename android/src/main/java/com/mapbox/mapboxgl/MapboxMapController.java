@@ -1410,7 +1410,7 @@ final class MapboxMapController
                   "The mapbox map instance is null",
                   null);
         }
-        String styleArgs = "";
+        String styleArgs = call.arguments();
         setStyleString(styleArgs);
         result.success(null);
         break;
