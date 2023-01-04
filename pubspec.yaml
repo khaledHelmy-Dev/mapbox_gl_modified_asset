@@ -6,21 +6,10 @@ homepage: https://github.com/ithebest/mapbox_gl_modified
 dependencies:
   flutter:
     sdk: flutter
-  mapbox_gl_modified_platform_interface:
-    git:
-      url: https://github.com/ithebest/mapbox_gl_modified.git
-      path: mapbox_gl_modified_platform_interface
-  mapbox_gl_modified_web:
-    git:
-      url: https://github.com/ithebest/mapbox_gl_modified.git
-      path: mapbox_gl_modified_web
+  mapbox_gl_modified_platform_interface: ^0.16.0
+  mapbox_gl_modified_web: ^0.16.0
   collection: ^1.15.0
 
-dependency_overrides:
-  mapbox_gl_modified_platform_interface:
-    path: ./mapbox_gl_modified_platform_interface
-  mapbox_gl_modified_web:
-    path: ./mapbox_gl_modified_web
 
 flutter:
   plugin:

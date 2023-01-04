@@ -16,16 +16,9 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   meta: ^1.1.7
-  mapbox_gl_modified_platform_interface:
-    git:
-      url: https://github.com/ithebest/mapbox_gl_modified.git
-      path: mapbox_gl_modified_platform_interface
+  mapbox_gl_modified_platform_interface: ^0.16.0
   mapbox_gl_dart: ^0.2.1
   image: ^3.0.0
-
-dependency_overrides:
-  mapbox_gl_modified_platform_interface:
-    path: ../mapbox_gl_modified_platform_interface
 
 dev_dependencies:
   flutter_test:
