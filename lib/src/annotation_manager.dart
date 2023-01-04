@@ -1,4 +1,4 @@
-part of mapbox_gl;
+part of mapbox_gl_modified;
 
 abstract class AnnotationManager<T extends Annotation> {
   final MapboxMapController controller;

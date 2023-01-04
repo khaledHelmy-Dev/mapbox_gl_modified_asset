@@ -1,26 +1,26 @@
-name: mapbox_gl
+name: mapbox_gl_modified
 description: A Flutter plugin for integrating Mapbox Maps inside a Flutter application on Android, iOS and web platfroms.
 version: 0.16.0
-homepage: https://github.com/tobrun/flutter-mapbox-gl
+homepage: https://github.com/ithebest/mapbox_gl_modified
 
 dependencies:
   flutter:
     sdk: flutter
-  mapbox_gl_platform_interface:
+  mapbox_gl_modified_platform_interface:
     git:
-      url: https://github.com/tobrun/flutter-mapbox-gl.git
-      path: mapbox_gl_platform_interface
-  mapbox_gl_web:
+      url: https://github.com/ithebest/mapbox_gl_modified.git
+      path: mapbox_gl_modified_platform_interface
+  mapbox_gl_modified_web:
     git:
-      url: https://github.com/tobrun/flutter-mapbox-gl.git
-      path: mapbox_gl_web
+      url: https://github.com/ithebest/mapbox_gl_modified.git
+      path: mapbox_gl_modified_web
   collection: ^1.15.0
 
 dependency_overrides:
-  mapbox_gl_platform_interface:
-    path: ./mapbox_gl_platform_interface
-  mapbox_gl_web:
-    path: ./mapbox_gl_web
+  mapbox_gl_modified_platform_interface:
+    path: ./mapbox_gl_modified_platform_interface
+  mapbox_gl_modified_web:
+    path: ./mapbox_gl_modified_web
 
 flutter:
   plugin:
@@ -31,7 +31,7 @@ flutter:
       ios:
         pluginClass: MapboxMapsPlugin
       web:
-        default_package: mapbox_gl_web
+        default_package: mapbox_gl_modified_web
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
