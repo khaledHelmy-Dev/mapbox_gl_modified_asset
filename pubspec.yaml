@@ -1,7 +1,7 @@
-name: mapbox_gl_modified
+name: mapbox_gl_modified_asset
 description: A Flutter plugin for integrating Mapbox Maps inside a Flutter application on Android, iOS and web platfroms.
 version: 0.16.0
-homepage: https://github.com/ithebest/mapbox_gl_modified
+homepage: https://github.com/ithebest/mapbox_gl_modified_asset
 
 dependencies:
   flutter:
